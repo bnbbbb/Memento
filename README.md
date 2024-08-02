@@ -49,4 +49,31 @@ URL 단축 서비스는 긴 URL을 Base62를 사용해 6글자로 단축된 URL�
 - VS Code
 
 > 실행 방법
-1. 
+1. clone
+```
+mkdir memento
+git clone https://github.com/bnbbbb/Memento.git .
+```
+2. 가상환경 설치
+```
+python3 -m venv venv
+source venv/bin/activate 
+```
+3. requirements.txt 설치
+```
+pip install -r requirements.txt
+```
+4. .env파일 설정
+```
+DB_USERNAME=myusername
+DB_PASSWORD=mypassword
+DB_HOST=localhost
+DB_PORT=5432
+DB_NAME=mydatabase
+```
+5. 실행
+```
+uvicorn app.main:app --reload
+```
+
+
